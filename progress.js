@@ -6,7 +6,8 @@ w.backgroundColor=new Color("#222222")
 
 const now = new Date()
 const weekday = now.getDay() == 0 ? 6 : now.getDay() - 1
-getwidget(24, now.getHours() + 1, "Today")
+const minutes=now.getMinutes() 
+getwidget(24*60, (now.getHours() + 1)*60+minutes, "Today")
 getwidget(7, weekday + 1, "This week")
 getwidget(30, now.getDate() + 1, "This month")
 getwidget(12, now.getMonth() + 1, "This year")
