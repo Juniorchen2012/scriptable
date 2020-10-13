@@ -7,8 +7,8 @@ if (args.widgetParameter == "inter") {
 } else if (args.widgetParameter == "liga") {
  
 }
-const requestM = new importModule('Env')()
-const json = await requestM.get({ 'url': url })
+// const requestM = new importModule('Env')()
+const json = await get({ 'url': url })
 
 const w = new ListWidget()
 w.backgroundColor = new Color("#36033B")
@@ -25,7 +25,7 @@ for (var item of json.groups[0].ranking) {
   const stack = w.addStack()
   stack.layoutHorizontally()
   stack.centerAlignContent()
-  const image = await requestM.loadImage(`https://images.onefootball.com/icons/teams/56/${item.team.idInternal}.png`)
+  const image = await loadImage(`https://images.onefootball.com/icons/teams/56/${item.team.idInternal}.png`)
   const imgwidget=stack.addImage(image)
   imgwidget.imageSize=new Size(16, 16)
 const stats=item.team.teamstats
@@ -60,4 +60,22 @@ function createTextStack(stack, text, width) {
   widgetText.textColor = Color.white()
   widgetText.textOpacity = 0.6
   return widgetText
+}
+
+async function get(opts) {
+      const request = new Request(opts.url)
+      request.headers = {
+        ...opts.headers,
+        ...this.defaultHeaders
+      }
+      var result=await request.loadJSON()
+      console.log(result)
+      return result
+    
+}
+
+ async function  loadImage(imgUrl) {
+  let req = new Request(imgUrl)
+  let image = await req.loadImage()
+  return image
 }
