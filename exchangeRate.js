@@ -5,15 +5,15 @@
 
 const w = new ListWidget()
 w.backgroundColor = new Color("#222222")
-const req = new importModule("Env")()
-const resp= await req.get({url:"https://api.exchangeratesapi.io/latest?symbols=CNY,GBP,CAD,RUB,JPY,AUD&base=USD"})
+// const req = new importModule("Env")()
+const resp= await get({url:"https://api.exchangeratesapi.io/latest?symbols=CNY,GBP,CAD,RUB,JPY,AUD&base=USD"})
 // symbols=CNY,GBP&
 for(let rate in resp.rates){
 //   console.log(rate)
 //   console.log(resp.rates[rate])
   const stack =w.addStack()
   stack.centerAlignContent()
-  const img= await req.loadImage("https://www.ecb.europa.eu/shared/img/flags/"+rate+".gif")
+  const img= await loadImage("https://www.ecb.europa.eu/shared/img/flags/"+rate+".gif")
   const imgw =stack.addImage(img)
   imgw.imageSize=new Size(20, 20)
   stack.addSpacer(10)
@@ -26,3 +26,20 @@ for(let rate in resp.rates){
 Script.setWidget(w)
 Script.complete()
 w.presentSmall()
+async function get(opts) {
+      const request = new Request(opts.url)
+      request.headers = {
+        ...opts.headers,
+        ...this.defaultHeaders
+      }
+      var result=await request.loadJSON()
+      console.log(result)
+      return result
+    
+}
+
+ async function  loadImage(imgUrl) {
+  let req = new Request(imgUrl)
+  let image = await req.loadImage()
+  return image
+}
