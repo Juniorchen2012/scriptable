@@ -4,7 +4,7 @@ scriptable scripts works with scriptable app on ios https://scriptable.app/
 #### random Unsplash Pic Script ,you can set keyword by widget parameter
 #### football script show Premie League tables
 #### progress script show time have gone progress in today, this week and so on.
-#### progress script show time have gone progress in today, this week and so on.
+#### exchange script show currency exchangerate.
 
 # All scripts in pic can been found 
 
