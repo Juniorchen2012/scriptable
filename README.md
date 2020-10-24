@@ -4,4 +4,4 @@ scriptable scripts
 ###Random Unsplash Pic  Script to create iOS 14 desktop Widget   via Scriptableapp,you can set keyword by widget parameter
 # Initial page
 
-![widget](https://github.com/Juniorchen2012/scriptable/blob/master/overall.png?raw=true)
+![widget](https://github.com/Juniorchen2012/scriptable/blob/master/overall_300x649.png?raw=true)
