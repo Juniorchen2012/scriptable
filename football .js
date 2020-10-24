@@ -1,18 +1,36 @@
-// Variables used by Scriptable.
-// These must be at the very top of the file. Do not edit.
-// icon-color: red; icon-glyph: futbol;
-var url = "https://feedmonster.onefootball.com/feeds/il/en/competitions/9/39301/standings.json"
-if (args.widgetParameter == "inter") {
+var id="9"
+var s="39301"
+// var matchdaysUrl ="https://feedmonster.onefootball.com/feeds/il/en/competitions/1/39285/matchdaysOverview.json"
+// zh en
 
-} else if (args.widgetParameter == "liga") {
- 
+if (args.widgetParameter == "laliga") {
+//laliga  
+  id = 10
+  s=39319
+}else if (args.widgetParameter == "inter") {
+//bundesliga  
+id=1
+s=39285
+} else if (args.widgetParameter == "sa") {
+//serie A
+id=13
+s=39325
+}else if (args.widgetParameter == "lue") {
+//ligue1 uber eats
+   id=23
+  s=39245
 }
+var url=`https://feedmonster.onefootball.com/feeds/il/en/competitions/${id}/${s}/standings.json`
+var iconUrl=`https://images.onefootball.com/icons/leagueColoredCompetition/64/${id}.png`
+
 // const requestM = new importModule('Env')()
 const json = await get({ 'url': url })
 
 const w = new ListWidget()
 w.backgroundColor = new Color("#36033B")
-w.backgroundImage=readBgImage()
+const bg = await drawBg(iconUrl)
+w.backgroundImage=bg
+// w.backgroundImage=readBgImage()
 const titlew = w.addText(`Team                            P       W/D/L      Goals      Points`)
 
 titlew.textColor = new Color("#e587ce")
@@ -78,4 +96,16 @@ async function get(opts) {
   let req = new Request(imgUrl)
   let image = await req.loadImage()
   return image
+}
+
+async function drawBg(iconUrl){
+ const image = await loadImage(iconUrl)
+const context =new DrawContext()
+context.size=new Size(300, 200)
+context.opaque=false
+context.respectScreenScale=true
+context.setFillColor(new Color("#36033B"))
+context.fill(new Rect(0,0,300,200))
+context.drawImageInRect(image, new Rect(255, 80, 40, 40))
+return context.getImage()
 }
