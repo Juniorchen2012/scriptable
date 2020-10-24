@@ -9,3 +9,5 @@ scriptable scripts works with scriptable app on ios https://scriptable.app/
 # All scripts in pic can been found 
 
 ![widget](https://github.com/Juniorchen2012/scriptable/blob/master/overall_300x649.png?raw=true)
+![widget](https://github.com/Juniorchen2012/scriptable/blob/master/IMG_4866_400x865.PNG?raw=true)
+![widget](https://github.com/Juniorchen2012/scriptable/blob/master/IMG_4867_400x865.PNG?raw=true)
