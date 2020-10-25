@@ -1,8 +1,13 @@
 var id="9"
 var s="39301"
+var local="en"
 // var matchdaysUrl ="https://feedmonster.onefootball.com/feeds/il/en/competitions/1/39285/matchdaysOverview.json"
 // zh en
-
+var title=`Team                            P       W/D/L      Goals      Points`
+if(Device.locale() == "zh_CN"){
+title=`球队                              赛   胜/平/负     进/失      积分`
+local="zh"
+}
 if (args.widgetParameter == "laliga") {
 //laliga  
   id = 10
@@ -20,7 +25,7 @@ s=39325
    id=23
   s=39245
 }
-var url=`https://feedmonster.onefootball.com/feeds/il/en/competitions/${id}/${s}/standings.json`
+var url=`https://feedmonster.onefootball.com/feeds/il/${local}/competitions/${id}/${s}/standings.json`
 var iconUrl=`https://images.onefootball.com/icons/leagueColoredCompetition/64/${id}.png`
 
 // const requestM = new importModule('Env')()
@@ -31,8 +36,7 @@ w.backgroundColor = new Color("#36033B")
 const bg = await drawBg(iconUrl)
 w.backgroundImage=bg
 // w.backgroundImage=readBgImage()
-const titlew = w.addText(`Team                            P       W/D/L      Goals      Points`)
-
+const titlew= w.addText(title)
 titlew.textColor = new Color("#e587ce")
 titlew.font = Font.boldSystemFont(13)
 var i = 0
