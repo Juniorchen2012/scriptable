@@ -7,11 +7,18 @@ w.backgroundColor=new Color("#222222")
 const now = new Date()
 const weekday = now.getDay() == 0 ? 6 : now.getDay() - 1
 const minutes=now.getMinutes() 
+if(Device.locale() == "zh_CN"){
+getwidget(24*60, (now.getHours() + 1)*60+minutes, "今日")
+getwidget(7, weekday + 1, "本周")
+getwidget(30, now.getDate() + 1, "本月")
+getwidget(12, now.getMonth() + 1, "今年")
+}else{
+
 getwidget(24*60, (now.getHours() + 1)*60+minutes, "Today")
 getwidget(7, weekday + 1, "This week")
 getwidget(30, now.getDate() + 1, "This month")
 getwidget(12, now.getMonth() + 1, "This year")
-
+}
 Script.setWidget(w)
 Script.complete()
 w.presentMedium()
