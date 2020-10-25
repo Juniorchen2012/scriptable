@@ -1,10 +1,12 @@
 # scriptable
 scriptable scripts works with scriptable app on ios https://scriptable.app/
 ## Random Unsplash Scripts
-#### random Unsplash Pic Script ,you can set keyword by widget parameter
-#### football script show Premier League tables
+#### random Unsplash Pic Script ,you can set keyword by widget parameter.
+#### football script show Premier League tables.
 #### progress script show time have gone progress in today, this week and so on.
 #### exchange script show currency exchangerate.
+#### weibo script show weibo hot search keywords.
+#### football_zh script show football game schedul.
 
 # All scripts in pic can been found 
 
