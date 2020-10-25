@@ -1,8 +1,7 @@
-var leagueId = 1
-var url = "https://gdc-soccerapi.hupu.com/soccer/match-data/v2/matches?time_zone=Asia%2FShanghai&client=5C60A99C-665D-4CEC-A118-E68E521BAE89&V=7.5.17&night=1&crt=1598277522&clientId=80798096&O=I&leagueId=csl&bddid=69854780823&sign=2e301d59f25508c3a2ee108aea281b67&preload=0"
-if (args.widgetParameter == "premier") {
-  url = "https://gdc-soccerapi.hupu.com/soccer/match-data/v2/matches?time_zone=Asia%2FShanghai&client=5C60A99C-665D-4CEC-A118-E68E521BAE89&V=7.5.17&night=1&crt=1598326351&clientId=80798096&O=I&leagueId=epl&bddid=69854780823&sign=0616f65886053d9ce49dec521e33cb01&preload=0"
-} else if (args.widgetParameter == "liga") {
+var url = "https://gdc-soccerapi.hupu.com/soccer/match-data/v2/matches?time_zone=Asia%2FShanghai&client=5C60A99C-665D-4CEC-A118-E68E521BAE89&V=7.5.17&night=1&crt=1598326351&clientId=80798096&O=I&leagueId=epl&bddid=69854780823&sign=0616f65886053d9ce49dec521e33cb01&preload=0"
+if (args.widgetParameter == "csl") {
+  url = "https://gdc-soccerapi.hupu.com/soccer/match-data/v2/matches?time_zone=Asia%2FShanghai&client=5C60A99C-665D-4CEC-A118-E68E521BAE89&V=7.5.17&night=1&crt=1598277522&clientId=80798096&O=I&leagueId=csl&bddid=69854780823&sign=2e301d59f25508c3a2ee108aea281b67&preload=0"
+} else if (args.widgetParameter == "laliga") {
   url = "https://gdc-soccerapi.hupu.com/soccer/match-data/v2/matches?time_zone=Asia%2FShanghai&client=5C60A99C-665D-4CEC-A118-E68E521BAE89&V=7.5.20&night=0&crt=1601118846&clientId=80798096&O=I&leagueId=liga&bddid=69854780823&sign=bf53920140be9ace18f7c1d4e00c9511&preload=0"
 }
 // const requestM = new importModule('Env')()
