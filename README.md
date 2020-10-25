@@ -10,4 +10,4 @@ scriptable scripts works with scriptable app on ios https://scriptable.app/
 
 ![widget](https://github.com/Juniorchen2012/scriptable/blob/master/overall_300x649.png?raw=true)
 ![widget](https://github.com/Juniorchen2012/scriptable/blob/master/en.png?raw=true)
-![widget](https://github.com/Juniorchen2012/scriptable/blob/masterzh.png?raw=true)
+![widget](https://github.com/Juniorchen2012/scriptable/blob/master/zh.png?raw=true)
