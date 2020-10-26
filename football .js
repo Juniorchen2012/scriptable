@@ -12,7 +12,7 @@ if (args.widgetParameter == "laliga") {
 //laliga  
   id = 10
   s=39319
-}else if (args.widgetParameter == "inter") {
+}else if (args.widgetParameter == "bl") {
 //bundesliga  
 id=1
 s=39285
