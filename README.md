@@ -7,6 +7,8 @@ scriptable scripts works with scriptable app on ios https://scriptable.app/
 #### exchange script show currency exchangerate(最新汇率).
 #### weibo script show weibo hot search keywords(微博热搜).
 #### football_zh script show football game schedul(中超 英超 西甲赛程).
+#### matchday script show football competitions of popular leagues(五大联赛赛程)
+#### goalsranking script show goals ranking data.(最佳射手榜)
 
 # All scripts in pic can been found 
 
