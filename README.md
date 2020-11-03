@@ -1,5 +1,6 @@
 # scriptable
 scriptable scripts works with scriptable app on ios https://scriptable.app/
+## Scripts count: 8
 ## Random Unsplash Scripts
 #### random Unsplash Pic Script ,you can set keyword by widget parameter(随机网络图片).
 #### football script show Premier League tables(五大联赛积分榜).
