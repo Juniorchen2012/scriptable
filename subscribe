@@ -1,0 +1,64 @@
+// progress
+const width=125
+const h=5
+const w = new ListWidget()
+w.backgroundColor=new Color("#222222")
+w.setPadding(0, 10, 0, 10)
+const now = new Date()
+const weekday = now.getDay() == 0 ? 6 : now.getDay() - 1
+const minutes=now.getMinutes() 
+
+getwidget(getProgress("2020-11-01T00:00:00Z")/90, "Netflix","#e50914")
+getwidget(getProgress("2020-08-06T00:00:00Z")/365, "YouTube","#ffffff")
+getwidget(getProgress("2020-07-14T00:00:00Z")/365, "Spotify","#1ed760")
+// getwidget(0, "AppleOne","#fb4e66")
+getwidget(getProgress("2020-10-16T00:00:00Z")/365, "Developer","#199ce9")
+
+getwidget(getProgress("2020-10-29T00:00:00Z")/180, "Disney+","#124292")
+// getwidget(getProgress("2020-10-29T00:00:00Z")/180, "Apple one","#fb4e66")
+
+function getProgress(startDateStr){
+// let str = "2020-07-14T17:00:00Z"
+const startDate=new Date(startDateStr)
+const now=new Date()
+const diffTime = Math.abs(now - startDate);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  
+console.log(startDate)
+console.log(now)
+console.log(diffDays)
+return diffDays
+}
+
+Script.setWidget(w)
+Script.complete()
+w.presentMedium()
+
+function getwidget(progress, str,color) {
+  const titlew = w.addText(str)
+  titlew.textColor = new Color(color)
+  titlew.font = Font.boldSystemFont(12)
+  w.addSpacer(1)
+  const imgw = w.addImage(creatProgress(progress,color))
+  imgw.imageSize=new Size(width, h)
+  w.addSpacer(1)
+}
+
+function creatProgress(progress,color){
+const context =new DrawContext()
+context.size=new Size(width, h)
+context.opaque=false
+context.respectScreenScale=true
+context.setFillColor(new Color("#48484b"))
+const path = new Path()
+path.addRoundedRect(new Rect(0, 0, width, h), 3, 2)
+context.addPath(path)
+context.fillPath()
+context.setFillColor(new Color(color))
+const path1 = new Path()
+path1.addRoundedRect(new Rect(0, 0, width*progress, h), 3, 2)
+context.addPath(path1)
+context.fillPath()
+return context.getImage()
+}
+
