@@ -3,8 +3,10 @@ var s="39301"
 var local="en"
 // var matchdaysUrl ="https://feedmonster.onefootball.com/feeds/il/en/competitions/112/39198/matchdaysOverview.json"
 // https://api.onefootball.com/scores-mixer/v1/en/cn/matchdays/6074754
-https://feedmonster.onefootball.com/feeds/il/en/competitions/112/39198/standings.json
+//https://feedmonster.onefootball.com/feeds/il/en/competitions/112/39198/standings.json
 // zh en
+
+
 if(Device.locale() == "zh_CN"){
 local="zh"
 }
@@ -25,6 +27,7 @@ s=39325
    id=23
   s=39245
 }
+//You can find more ids and s value here:https://github.com/Juniorchen2012/scriptable/blob/master/footballLeagueData
 formatDate()
 
 
