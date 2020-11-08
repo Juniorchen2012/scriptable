@@ -3,6 +3,7 @@ var s="39301"
 var local="en"
 // var matchdaysUrl ="https://feedmonster.onefootball.com/feeds/il/en/competitions/1/39285/matchdaysOverview.json"
 // zh en
+
 var title=`Team                            P       W/D/L      Goals      Points`
 if(Device.locale() == "zh_CN"){
 title=`球队                              赛   胜/平/负     进/失      积分`
@@ -25,6 +26,7 @@ s=39325
    id=23
   s=39245
 }
+//You can find more ids and s value here:https://github.com/Juniorchen2012/scriptable/blob/master/footballLeagueData
 var url=`https://feedmonster.onefootball.com/feeds/il/${local}/competitions/${id}/${s}/standings.json`
 var iconUrl=`https://images.onefootball.com/icons/leagueColoredCompetition/64/${id}.png`
 
