@@ -1,7 +1,7 @@
 var id="9"
 var s="39301"
 var local="en"
-
+//You can find more ids and s value here:https://github.com/Juniorchen2012/scriptable/blob/master/footballLeagueData
 if(Device.locale() == "zh_CN"){
 local="zh"
 }
