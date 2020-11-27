@@ -1,7 +1,8 @@
 # scriptable
 scriptable scripts works with scriptable app on ios https://scriptable.app/
-## Scripts count: 9
+## Scripts count: 10
 ## Random Unsplash Scripts
+#### twitter follower count(Twitter粉丝数).
 #### random Unsplash Pic Script ,you can set keyword by widget parameter(随机网络图片).
 #### football script show Premier League tables(五大联赛积分榜).
 #### progress script show time have gone progress in today, this week and so on(时间进度).
