@@ -7,8 +7,14 @@ const w = new ListWidget()
 w.url="twitter://"
 w.backgroundColor = new Color("#1da0f2")
 
-const resp= await get({url:`https://counts.live/api/twitter-follower-count/${twitter}/data`,headers:{"Cookie": "__cfduid=d0e779c9e83b5126547bd5f43991b41da1606145300","Referer":`https://counts.live/twitter-follower-count/${twitter}`}})
+const resp= await get({url:`https://counts.live/api/twitter-follower-count/${twitter}/live`,headers:{"Cookie": "__cfduid=d0e779c9e83b5126547bd5f43991b41da1606145300","Referer":`https://counts.live/twitter-follower-count/${twitter}`}})
+try{
+console.log(resp.data.lv_identifier)
+}catch{
+  resp= await get({url:`https://counts.live/api/twitter-follower-count/${twitter}/data`,headers:{"Cookie": "__cfduid=d0e779c9e83b5126547bd5f43991b41da1606145300","Referer":`https://counts.live/twitter-follower-count/${twitter}`}})
+}
 
+console.log(resp.data)
   const stack =w.addStack()
 const img= await loadImage(`https://res.cloudinary.com/dzd0tndsx/image/twitter_name/${twitter}.jpg`)
 const imgw =stack.addImage(img)
